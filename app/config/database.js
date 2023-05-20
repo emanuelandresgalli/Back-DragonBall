@@ -4,7 +4,7 @@ dotenv.config();
 //Requerimos mongoose para comunicarnos con la bd
 const mongoose = require("mongoose");
 //guardamos la url de Mongo en una variable
-const mongoDb = "mongodb+srv://node:lZUdbiXc3n5JS6Qq@cluster0.iwygzei.mongodb.net/DragonBall";
+const mongoDb = process.env.MONGO_DB;
 //Configuramos la función connect 
 const connect = async () => {
   try {
