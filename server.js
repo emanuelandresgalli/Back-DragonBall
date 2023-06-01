@@ -1,6 +1,5 @@
 const express = require("express");
-const mongoose = require("mongoose");
- const {connect} = require("./app/config/database");
+const {connect} = require("./app/config/database");
 const cors = require("cors");
 
 
@@ -54,4 +53,4 @@ app.listen(8000, () => {
   console.log("Node server listening on port 8000")
 })
 
-module.export = app;
+module.exports = app;
