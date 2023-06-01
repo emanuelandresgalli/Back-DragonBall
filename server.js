@@ -1,6 +1,9 @@
 const express = require("express");
+const mongoose = require("mongoose");
  const {connect} = require("./app/config/database");
 const cors = require("cors");
+
+
 const logger = require("morgan");
 const users = require("./app/api/routes/users.routes.js");
 const cards = require("./app/api/routes/cards.routes.js");
@@ -22,7 +25,7 @@ app.use(cors({
     credentials: true,
   }));
 
-  
+app.use(express.static("public"))
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
 
@@ -51,3 +54,4 @@ app.listen(8000, () => {
   console.log("Node server listening on port 8000")
 })
 
+module.export = app;
